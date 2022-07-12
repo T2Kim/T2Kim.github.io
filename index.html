@@ -22,10 +22,6 @@
               </p>
               <p>I am a Ph.D. candidate at POSTECH.
                 <br>
-                <!-- My research interest lies in computational photography and computer vision using deep learning.
-                In particular, I’m intrigued about image and video enhancement tasks such as deblurring and super-resolution.
-                Check my publications to get a glimpse of my work. -->
-                <!-- I'm interested in computer vision, machine learning, optimization, and image processing. Much of my research is about inferring the physical world (shape, motion, color, light, etc) from images. Representative papers are <span class="highlight">highlighted</span>. -->
               </p>
               <p style="text-align:center">
                 <a href="mailto:min00001@postech.ac.kr">Email</a> &nbsp/&nbsp
@@ -34,7 +30,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/hyomin.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/hyomin.jpg" class="hoverZoomLink"></a>
+              <a href="images/hyomin.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/hyomin_circle.jpg" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -44,12 +40,49 @@
           <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
             <heading>Publications</heading>
-            <p>
-            </p>
           </td>
         </tr>
         </tbody></table>
 
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        
+        
+        <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='malle_image'>
+                <img src='papers/PG2019_TexMapGen/images/ours.png' width="160"></div>
+              <img src='papers/PG2019_TexMapGen/images/geo.png' width="160">
+            </div>
+            <script type="text/javascript">
+              function malle_start() {
+                document.getElementById('malle_image').style.opacity = "1";
+              }
+
+              function malle_stop() {
+                document.getElementById('malle_image').style.opacity = "0";
+              }
+              malle_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="http://cg.postech.ac.kr/papers/2019_PG_Kim.pdf">
+              <papertitle>Global Texture Mapping for Dynamic Objects</papertitle>
+            </a>
+            <br>
+            Jungeon Kim,
+            <strong>Hyomin Kim</strong>,
+            Jaesik Park,
+            Seungyong Lee
+            <br>
+            <em>ECCV</em>, 2022
+            <br>
+            <a href="http://cg.postech.ac.kr/papers/2019_PG_Kim.pdf">paper</a>
+            <p></p>
+          </td>
+        </tr>
+
+        
           
         </tbody></table>
         
