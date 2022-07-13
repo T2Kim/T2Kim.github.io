@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -46,13 +46,30 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         
-        
         <tr onmouseout="malle_stop()" onmouseover="malle_start()">
           <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
+            <div class="one" id="paper">
               <div class="two" id='malle_image'>
-                <img src='papers/PG2019_TexMapGen/images/ours.png' width="160"></div>
-              <img src='papers/PG2019_TexMapGen/images/geo.png' width="160">
+                <!-- <img src='papers/PG2019_TexMapGen/ours.jpg' width="180"> -->
+                
+                  <div class="image-comparison-slider">
+                    <img src="papers/PG2019_TexMapGen/naive.jpg" alt="before" width="180">
+                    <div class="img-wrapper">
+                      <img src="papers/PG2019_TexMapGen/ours.jpg" alt="after" width="180">
+                    </div>
+                    <span class="label label-before">Before</span>
+                    <span class="label label-after">After</span>
+                    <div class="handle">
+                      <div class="handle-line"></div>
+                      <div class="handle-circle">
+                        <i class="fa-thin fa-chevron-left"></i>
+                        <i class="fa-thin fa-chevron-right"></i>
+                      </div>
+                      <div class="handle-line"></div>
+                    </div>
+                </div>
+              </div>
+              <img src='papers/PG2019_TexMapGen/geo.jpg' width="180">
             </div>
             <script type="text/javascript">
               function malle_start() {
@@ -75,16 +92,95 @@
             Jaesik Park,
             Seungyong Lee
             <br>
-            <em>ECCV</em>, 2022
+            <em>Pacific Graphics</em>, 2022
             <br>
             <a href="http://cg.postech.ac.kr/papers/2019_PG_Kim.pdf">paper</a>
             <p></p>
           </td>
         </tr>
 
+
+
         
-          
-        </tbody></table>
+        <tr onmouseout="glotex_stop()" onmouseover="glotex_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one" id='glotex_start'>
+              <div class="two" id='glotex_image'>
+                <!-- <img src='papers/PG2019_TexMapGen/ours.jpg' width="180"> -->
+                
+                  <div class="image-comparison-slider" id="glotex_slide">
+                    <img src="papers/PG2019_TexMapGen/naive.jpg" alt="before" width="180">
+                    <div class="img-wrapper" id="glotex_slide_wrapper">
+                      <img src="papers/PG2019_TexMapGen/ours.jpg" alt="after" width="180">
+                    </div>
+                    <span class="label label-before">Before</span>
+                    <span class="label label-after">After</span>
+                    <div class="handle" id="glotex_handle">
+                      <div class="handle-line"></div>
+                      <div class="handle-circle">
+                        <i class="fa-thin fa-chevron-left"></i>
+                        <i class="fa-thin fa-chevron-right"></i>
+                      </div>
+                      <div class="handle-line"></div>
+                    </div>
+                </div>
+              </div>
+              <img src='papers/PG2019_TexMapGen/geo.jpg' width="180">
+            </div>
+            <script type="text/javascript">
+              function glotex_start() {
+                document.getElementById('glotex_image').style.opacity = "1";
+              }
+
+              function glotex_stop() {
+                document.getElementById('glotex_image').style.opacity = "0";
+              }
+              glotex_stop()
+
+              const glotex_slide = document.getElementById("glotex_slide");
+              const glotexImgWrapper = document.getElementById("glotex_slide_wrapper");
+              const glotexHandle = document.getElementById("glotex_handle");
+              
+              glotex_slide.addEventListener("mousemove", glotexMove);
+
+              function glotexMove(event) {
+                const sliderLeftX = glotex_slide.offsetLeft + document.getElementById("glotex_start").offsetLeft;
+                // const sliderLeftX = relativeLeft;
+                const sliderWidth = glotex_slide.clientWidth;
+                const sliderHandleWidth = sliderHandle.clientWidth;
+                const sliderLe = sliderHandle.clientWidth;
+              
+                let mouseX = event.clientX - sliderLeftX;
+                if(mouseX < 0) mouseX = 0;
+                else if(mouseX > sliderWidth) mouseX = sliderWidth;
+              
+                glotexImgWrapper.style.width = `${((1 - mouseX/sliderWidth) * 100).toFixed(4)}%`;
+                glotexHandle.style.left = `calc(${((mouseX/sliderWidth) * 100).toFixed(4)}% - ${sliderHandleWidth/2}px)`;
+              }
+
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="http://cg.postech.ac.kr/papers/2019_PG_Kim.pdf">
+              <papertitle>Global Texture Mapping for Dynamic Objects</papertitle>
+            </a>
+            <br>
+            Jungeon Kim,
+            <strong>Hyomin Kim</strong>,
+            Jaesik Park,
+            Seungyong Lee
+            <br>
+            <em>Pacific Graphics</em>, 2022
+            <br>
+            <a href="http://cg.postech.ac.kr/papers/2019_PG_Kim.pdf">paper</a>
+            <p></p>
+          </td>
+        </tr>
+
+
+        </tbody>
+        
+        </table>
         
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -102,6 +198,9 @@
       </td>
     </tr>
   </table>
+
+  
+  <script src="main.js"></script>
 </body>
 
 </html>
