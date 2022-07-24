@@ -20,7 +20,9 @@
               <p style="text-align:center">
                 <name>Hyomin Kim</name>
               </p>
-              <p>I am a Ph.D. candidate at POSTECH.
+              <p>I am a Ph.D. student at POSTECH Computer Graphics Lab. 
+                <br>
+                My main interest lies in 3D reconstruction and computer vision using deep learning.
                 <br>
               </p>
               <p style="text-align:center">
@@ -45,87 +47,135 @@
         </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        
-        <tr onmouseout="malle_stop()" onmouseover="malle_start()">
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one" id="paper">
-              <div class="two" id='malle_image'>
-                <!-- <img src='papers/PG2019_TexMapGen/ours.jpg' width="180"> -->
-                
-                  <div class="image-comparison-slider">
-                    <img src="papers/PG2019_TexMapGen/naive.jpg" alt="before" width="180">
-                    <div class="img-wrapper">
-                      <img src="papers/PG2019_TexMapGen/ours.jpg" alt="after" width="180">
-                    </div>
-                    <span class="label label-before">Before</span>
-                    <span class="label label-after">After</span>
-                    <div class="handle">
-                      <div class="handle-line"></div>
-                      <div class="handle-circle">
-                        <i class="fa-thin fa-chevron-left"></i>
-                        <i class="fa-thin fa-chevron-right"></i>
-                      </div>
-                      <div class="handle-line"></div>
-                    </div>
-                </div>
-              </div>
-              <img src='papers/PG2019_TexMapGen/geo.jpg' width="180">
-            </div>
-            <script type="text/javascript">
-              function malle_start() {
-                document.getElementById('malle_image').style.opacity = "1";
-              }
+        <!-- PAPERS START -->
 
-              function malle_stop() {
-                document.getElementById('malle_image').style.opacity = "0";
-              }
-              malle_stop()
-            </script>
+        
+        <!-- TOG 2021 -->
+        <tr>
+          <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src='papers/2022_TOG_TextureMe/textureMe_teaser.jpg' width="180">
           </td>
           <td style="padding:20px;width:75%;vertical-align:middle">
-            <a href="http://cg.postech.ac.kr/papers/2019_PG_Kim.pdf">
-              <papertitle>Global Texture Mapping for Dynamic Objects</papertitle>
+            <a href="http://cg.postech.ac.kr/papers/2022_TOG_Kim.pdf">
+              <papertitle>TextureMe: High-quality Textured Scene Reconstruction in Real Time</papertitle>
             </a>
             <br>
             Jungeon Kim,
             <strong>Hyomin Kim</strong>,
+            HyeonSeo Nam,
             Jaesik Park,
             Seungyong Lee
             <br>
-            <em>Pacific Graphics</em>, 2022
+            <em>ACM Transactions on Graphics</em>, (will be presented at SIGGRAPH 2022)
             <br>
-            <a href="http://cg.postech.ac.kr/papers/2019_PG_Kim.pdf">paper</a>
-            <p></p>
+            <a href="http://cg.postech.ac.kr/papers/2022_TOG_Kim.pdf">paper</a> /
+            <a href="https://youtu.be/9DwykvF2Emk">video</a>
           </td>
+          
         </tr>
 
-
-
+        <!-- ICCV 2021 -->
+        <tr onmouseout="dvm_stop()" onmouseover="dvm_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="hov-anim" id='dvm_image'>
+                <img src="papers/2021_ICCV_DVM/ours.gif" alt="before" width="180" id='dvm_ours'>
+              </div>
+              <img src='papers/2021_ICCV_DVM/depth_init.jpg' width="180">
+            </div>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="http://cg.postech.ac.kr/papers/2021_ICCV_Kim.pdf">
+              <papertitle>Deep Virtual Markers for Articulated 3D Shapes</papertitle>
+            </a>
+            <br>
+            <strong>Hyomin Kim</strong>,
+            Jungeon Kim,
+            Jaewon Kam,
+            Jaesik Park,
+            Seungyong Lee
+            <br>
+            <em>ICCV</em>, 2021 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
+            <br>
+            <a href="http://cg.postech.ac.kr/papers/2021_ICCV_Kim.pdf">paper</a> /
+            <a href="https://arxiv.org/abs/2108.09000">arXiv</a> /
+            <a href="https://github.com/T2Kim/DeepVirtualMarkers">code</a>
+            <p></p>
+          </td>
+          
+          <script type="text/javascript">
+            function dvm_start() {
+              document.getElementById('dvm_ours').setAttribute("src", "papers/2021_ICCV_DVM/depth_init.jpg");
+              document.getElementById('dvm_ours').setAttribute("src", "papers/2021_ICCV_DVM/ours.gif");
+              document.getElementById('dvm_image').style.opacity = "1";
+            }
+            function dvm_stop() {
+              document.getElementById('dvm_image').style.opacity = "0";
+            }
+            dvm_stop()
+          </script>
+        </tr>
         
+        <!-- EG 2021 -->
+        <tr onmouseout="spatemp_stop()" onmouseover="spatemp_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one" id='spatemp_main'>
+              <div class="hov-anim" id='spatemp_image'>
+                <img src="papers/2021_EG_SpaTempTex/ours_front.gif" alt="before" width="180" id='spatemp_ours'>
+              </div>
+              <img src='papers/2021_EG_SpaTempTex/init_geo.jpg' width="180">
+            </div>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="http://cg.postech.ac.kr/papers/2021_Eurographics_Kim.pdf">
+              <papertitle>Spatiotemporal Texture Reconstruction for Dynamic Objects Usinga Single RGB-D Camera</papertitle>
+            </a>
+            <br>
+            <strong>Hyomin Kim</strong>,
+            Jungeon Kim,
+            HyeonSeo Nam,
+            Jaesik Park,
+            Seungyong Lee
+            <br>
+            <em>Eurographics</em>, 2021
+            <br>
+            <a href="http://cg.postech.ac.kr/papers/2021_Eurographics_Kim.pdf">paper</a> /
+            <a href="https://arxiv.org/abs/2108.09007/">arXiv</a> /
+            <a href="https://github.com/T2Kim/Sptiotemporal-Texture">code</a>
+            <p></p>
+          </td>
+          
+          <script type="text/javascript">
+            function spatemp_start() {
+              document.getElementById('spatemp_ours').setAttribute("src", "papers/2021_EG_SpaTempTex/init_geo.jpg");
+              document.getElementById('spatemp_ours').setAttribute("src", "papers/2021_EG_SpaTempTex/ours_front.gif");
+              document.getElementById('spatemp_image').style.opacity = "1";
+            }
+            function spatemp_stop() {
+              document.getElementById('spatemp_image').style.opacity = "0";
+            }
+            spatemp_stop()
+          </script>
+        </tr>
+        
+        <!-- PG 2019 -->
         <tr onmouseout="glotex_stop()" onmouseover="glotex_start()">
           <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one" id='glotex_start'>
+            <div class="one" id='glotex_main'>
               <div class="two" id='glotex_image'>
-                <!-- <img src='papers/PG2019_TexMapGen/ours.jpg' width="180"> -->
-                
-                  <div class="image-comparison-slider" id="glotex_slide">
-                    <img src="papers/PG2019_TexMapGen/naive.jpg" alt="before" width="180">
-                    <div class="img-wrapper" id="glotex_slide_wrapper">
-                      <img src="papers/PG2019_TexMapGen/ours.jpg" alt="after" width="180">
+                  <div class="image-comparison-slider" id="glotex_ours">
+                    <img src="papers/2019_PG_TexMapGen/ours.jpg" alt="before" width="180">
+                    <div class="img-wrapper" id="glotex_naive">
+                      <img src="papers/2019_PG_TexMapGen/naive.jpg" alt="after" width="180">
                     </div>
-                    <span class="label label-before">Before</span>
-                    <span class="label label-after">After</span>
                     <div class="handle" id="glotex_handle">
                       <div class="handle-line"></div>
-                      <div class="handle-circle">
-                        <i class="fa-thin fa-chevron-left"></i>
-                        <i class="fa-thin fa-chevron-right"></i>
-                      </div>
+                      <div class="handle-circle"></div>
                       <div class="handle-line"></div>
                     </div>
                 </div>
               </div>
-              <img src='papers/PG2019_TexMapGen/geo.jpg' width="180">
+              <img src='papers/2019_PG_TexMapGen/geo.jpg' width="180">
             </div>
             <script type="text/javascript">
               function glotex_start() {
@@ -135,28 +185,21 @@
               function glotex_stop() {
                 document.getElementById('glotex_image').style.opacity = "0";
               }
-              glotex_stop()
 
-              const glotex_slide = document.getElementById("glotex_slide");
-              const glotexImgWrapper = document.getElementById("glotex_slide_wrapper");
-              const glotexHandle = document.getElementById("glotex_handle");
-              
-              glotex_slide.addEventListener("mousemove", glotexMove);
+              const glotexSlider = document.getElementById("glotex_ours");
 
+              glotexSlider.addEventListener("mousemove", glotexMove);
               function glotexMove(event) {
-                const sliderLeftX = glotex_slide.offsetLeft + document.getElementById("glotex_start").offsetLeft;
-                // const sliderLeftX = relativeLeft;
-                const sliderWidth = glotex_slide.clientWidth;
-                const sliderHandleWidth = sliderHandle.clientWidth;
-                const sliderLe = sliderHandle.clientWidth;
-              
+                const sliderLeftX = glotexSlider.offsetLeft + document.getElementById("glotex_main").offsetLeft;
+                const sliderWidth = glotexSlider.clientWidth;
+                const sliderHandleWidth =  document.getElementById("glotex_handle").clientWidth;
                 let mouseX = event.clientX - sliderLeftX;
                 if(mouseX < 0) mouseX = 0;
                 else if(mouseX > sliderWidth) mouseX = sliderWidth;
-              
-                glotexImgWrapper.style.width = `${((1 - mouseX/sliderWidth) * 100).toFixed(4)}%`;
-                glotexHandle.style.left = `calc(${((mouseX/sliderWidth) * 100).toFixed(4)}% - ${sliderHandleWidth/2}px)`;
+                document.getElementById("glotex_naive").style.width = `${((1 - mouseX/sliderWidth) * 100).toFixed(4)}%`;
+                document.getElementById("glotex_handle").style.left = `calc(${((mouseX/sliderWidth) * 100).toFixed(4)}% - ${sliderHandleWidth/2}px)`;
               }
+              glotex_stop()
 
             </script>
           </td>
@@ -170,13 +213,14 @@
             Jaesik Park,
             Seungyong Lee
             <br>
-            <em>Pacific Graphics</em>, 2022
+            <em>Pacific Graphics</em>, 2019
             <br>
             <a href="http://cg.postech.ac.kr/papers/2019_PG_Kim.pdf">paper</a>
             <p></p>
           </td>
         </tr>
 
+        <!-- PAPERS END -->
 
         </tbody>
         
@@ -198,33 +242,6 @@
       </td>
     </tr>
   </table>
-
-  
-  <script type="text/javascript">
-    const paperMain = document.getElementById("paper");
-    const slider = document.querySelector(".image-comparison-slider");
-    const sliderImgWrapper = document.querySelector(".image-comparison-slider .img-wrapper");
-    const sliderHandle = document.querySelector(".image-comparison-slider .handle");
-    
-    slider.addEventListener("mousemove", sliderMouseMove);
-    
-    function sliderMouseMove(event) {
-      const sliderLeftX = slider.offsetLeft + paperMain.offsetLeft;
-      // const sliderLeftX = relativeLeft;
-      const sliderWidth = slider.clientWidth;
-      const sliderHandleWidth = sliderHandle.clientWidth;
-      const sliderLe = sliderHandle.clientWidth;
-    
-      let mouseX = event.clientX - sliderLeftX;
-      if(mouseX < 0) mouseX = 0;
-      else if(mouseX > sliderWidth) mouseX = sliderWidth;
-    
-      sliderImgWrapper.style.width = `${((1 - mouseX/sliderWidth) * 100).toFixed(4)}%`;
-      sliderHandle.style.left = `calc(${((mouseX/sliderWidth) * 100).toFixed(4)}% - ${sliderHandleWidth/2}px)`;
-    }
-    
-  </script>
-  <!-- <script src="main.js"></script> -->
 </body>
 
 </html>

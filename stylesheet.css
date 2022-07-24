@@ -112,6 +112,12 @@ name {
   font-size: 32px;
 }
 
+.hov-anim {
+  width: var(--image-width);
+  height: var(--image-height);
+  position: absolute;
+}
+
 .one {
   width: var(--image-width);
   height: var(--image-height);
@@ -136,10 +142,6 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
-
-
-
-
 
 .image-comparison-slider {
   position: relative;
