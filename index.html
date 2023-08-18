@@ -49,6 +49,50 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <!-- PAPERS START -->
 
+        
+        <!-- SIGGRAPH 2023 -->
+        <tr onmouseout="adadense_stop()" onmouseover="adadense_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="hov-anim" id='adadense_image'>
+                <img src="papers/2023_SIGGRAPH_AdaptiveDensity/ref.gif" alt="before" width="230" id='adadense_ours'>
+              </div>
+              <img src='papers/2023_SIGGRAPH_AdaptiveDensity/init.jpg' width="230">
+            </div>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3588432.3591498">
+              <papertitle>Mesh Density Adaptation for Template-based Shape Reconstruction</papertitle>
+            </a>
+            <br>
+            <strong>Yucheol Jung*</strong>,
+            <strong>Hyomin Kim*</strong>,
+            Gyeongha Hwang,
+            Seung-Hwan Baek,
+            Seungyong Lee
+            <br>
+            <em>SIGGRAPH</em>, 2023
+            <br>
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3588432.3591498">paper</a> /
+            <a href="https://arxiv.org/abs/2307.16205">arXiv</a> /
+            <a href="https://github.com/ycjungSubhuman/density-adaptation">code</a> /
+            <a href="https://youtu.be/L-WNBUNyP-Y">video</a>
+            <p></p>
+          </td>
+          
+          <script type="text/javascript">
+            function adadense_start() {
+              document.getElementById('adadense_ours').setAttribute("src", "papers/2023_SIGGRAPH_AdaptiveDensity/init.jpg");
+              document.getElementById('adadense_ours').setAttribute("src", "papers/2023_SIGGRAPH_AdaptiveDensity/ref.gif");
+              document.getElementById('adadense_image').style.opacity = "1";
+            }
+            function adadense_stop() {
+              document.getElementById('adadense_image').style.opacity = "0";
+            }
+            adadense_stop()
+          </script>
+        </tr>
+
         <!-- TOG 2022 -->
         <tr>
           <td style="padding:20px;width:25%;vertical-align:middle">
@@ -118,8 +162,8 @@
             <strong>Hyomin Kim</strong>,
             Jungeon Kim,
             Jaewon Kam,
-            Jaesik Park,
-            Seungyong Lee
+            Jaesik Park*,
+            Seungyong Lee*
             <br>
             <em>ICCV</em>, 2021 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
             <br>
